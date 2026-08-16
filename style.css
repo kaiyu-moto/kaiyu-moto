@@ -289,8 +289,8 @@ body {
 .vehicle-photo-img {
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: contain;
-  background: #f3f4f6;
+  object-fit: cover;
+  object-position: center;
   border-radius: 8px;
   margin-bottom: 14px;
 }
