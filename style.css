@@ -278,7 +278,7 @@ body {
   background: linear-gradient(135deg, #eef0f3, #dfe3e9);
   color: #9aa2af;
   border-radius: 8px;
-  height: 150px;
+  aspect-ratio: 4 / 3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -288,8 +288,9 @@ body {
 
 .vehicle-photo-img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #f3f4f6;
   border-radius: 8px;
   margin-bottom: 14px;
 }
