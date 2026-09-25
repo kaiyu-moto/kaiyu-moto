@@ -3,158 +3,218 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>愷羽車業｜機車買賣</title>
-<meta name="description" content="愷羽車業 - 專業機車買賣，車況透明、價格合理，提供收購與交車服務。">
+<title>愷羽車業｜台中中古機車買賣</title>
+<meta name="description" content="愷羽車業 - 台中北區中古機車買賣，車況透明、價格合理，可辦分期、線上購車免到店。">
+<meta property="og:title" content="愷羽車業｜台中中古機車買賣">
+<meta property="og:description" content="車況透明、價格合理，可辦分期、線上購車免到店。">
+<meta property="og:image" content="logo.jpg">
 <link rel="icon" type="image/jpeg" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container">
-    <a href="#top" class="brand">
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="愷羽車業 回到頂部">
       <img src="logo.jpg" alt="愷羽車業" class="brand-logo">
     </a>
-    <nav>
-      <a href="#about">關於我們</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="開啟選單" aria-expanded="false" aria-controls="site-nav">
+      <svg class="ico" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <a href="#vehicles">在售車輛</a>
       <a href="#services">服務項目</a>
-      <a href="#vehicles">精選車輛</a>
       <a href="#process">購車流程</a>
-      <a href="#why">為什麼選我們</a>
       <a href="#faq">常見問題</a>
-      <a href="#contact">聯絡資訊</a>
+      <a href="#contact">聯絡我們</a>
+      <a href="https://line.me/R/ti/p/@kymoto" target="_blank" rel="noopener" class="nav-cta">LINE 詢問</a>
     </nav>
   </div>
 </header>
 
 <section id="top" class="hero">
-  <div class="hero-glow"></div>
-  <div class="container hero-content">
-    <img src="logo.jpg" alt="愷羽車業 PRE-OWNED MOTORCYCLES" class="hero-logo">
-    <h2>值得信賴的機車買賣夥伴</h2>
-    <p>誠信經營、車況透明，讓每一次交易都安心。</p>
-    <div class="hero-actions">
-      <a href="#vehicles" class="btn btn-primary">看看目前車輛</a>
-      <a href="#contact" class="btn btn-outline">聯絡我們</a>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">PRE-OWNED MOTORCYCLES · 台中</p>
+      <h1>值得信賴的<br><span class="gold-text">機車買賣夥伴</span></h1>
+      <p class="hero-lead">誠信經營、車況透明，讓每一次交易都安心。<br>可辦分期，線上看車免到店。</p>
+      <div class="hero-actions">
+        <a href="#vehicles" class="btn btn-primary">看在售車輛</a>
+        <a href="https://line.me/R/ti/p/@kymoto" target="_blank" rel="noopener" class="btn btn-ghost">加 LINE 詢問</a>
+      </div>
+      <ul class="hero-points">
+        <li><svg class="ico" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>車況透明</li>
+        <li><svg class="ico" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>可辦分期</li>
+        <li><svg class="ico" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>協助過戶</li>
+      </ul>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo">
+        <img src="images/CAR01.jpg" alt="愷羽車業店內展示車輛">
+      </div>
+      <div class="hero-badge">
+        <span class="hero-badge-num"><span data-vehicle-count>—</span></span>
+        <span class="hero-badge-label">台在售車輛</span>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="about" class="section">
-  <div class="container">
-    <h3>關於我們</h3>
-    <p>
-      愷羽車業專營中古機車買賣，深耕在地市場，累積許多回頭客與口碑推薦。
-      我們堅持每一台車出售前都經過檢查，車況資訊公開透明，不隱瞞、不加價，
-      讓客戶能安心選購、放心騎乘。
-    </p>
-    <div class="stats">
+  <div class="container about-grid">
+    <div class="reveal">
+      <p class="eyebrow">ABOUT US</p>
+      <h2 class="section-title">關於愷羽車業</h2>
+      <p class="about-text">
+        愷羽車業專營中古機車買賣，深耕台中在地市場，累積許多回頭客與口碑推薦。
+        我們堅持每一台車出售前都經過檢查，車況資訊公開透明，不隱瞞、不加價，
+        讓客戶能安心選購、放心騎乘。
+      </p>
+    </div>
+    <div class="stats reveal">
       <div class="stat">
-        <span class="stat-num">多年</span>
-        <span class="stat-label">經營經驗</span>
+        <span class="stat-num"><span data-vehicle-count>—</span><small>台</small></span>
+        <span class="stat-label">目前在售車輛</span>
       </div>
       <div class="stat">
-        <span class="stat-num">100%</span>
-        <span class="stat-label">車況透明</span>
+        <span class="stat-num">100<small>%</small></span>
+        <span class="stat-label">車況透明告知</span>
       </div>
       <div class="stat">
-        <span class="stat-num">多款</span>
-        <span class="stat-label">熱門車型</span>
+        <span class="stat-num">分期</span>
+        <span class="stat-label">協助辦理</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">免到店</span>
+        <span class="stat-label">線上看車購車</span>
       </div>
     </div>
   </div>
 </section>
 
-<section id="services" class="section alt">
+<section id="vehicles" class="section section-soft">
   <div class="container">
-    <h3>服務項目</h3>
-    <div class="cards">
-      <div class="card">
-        <h4>中古機車買賣</h4>
+    <div class="section-head reveal">
+      <p class="eyebrow">INVENTORY</p>
+      <h2 class="section-title">在售車輛</h2>
+      <p class="section-sub">共 <strong data-vehicle-count>—</strong> 台，看到喜歡的按「詢問」直接 LINE 我們</p>
+    </div>
+    <div class="filter-bar" id="vehicle-filter" role="tablist" aria-label="依排氣量篩選"></div>
+    <div id="vehicle-list" class="vehicle-grid"></div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">SERVICES</p>
+      <h2 class="section-title">服務項目</h2>
+    </div>
+    <div class="service-grid">
+      <div class="service-card reveal">
+        <span class="service-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span>
+        <h3>中古機車買賣</h3>
         <p>提供多款優質二手機車，車況清楚標示，價格公道實在。</p>
       </div>
-      <div class="card">
-        <h4>機車收購</h4>
+      <div class="service-card reveal">
+        <span class="service-icon"><svg class="ico" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></span>
+        <h3>機車收購</h3>
         <p>不需要的愛車歡迎詢價收購，估價快速、交易乾脆。</p>
       </div>
-      <div class="card">
-        <h4>買車諮詢</h4>
+      <div class="service-card reveal">
+        <span class="service-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+        <h3>買車諮詢</h3>
         <p>依預算與需求推薦合適車款，協助辦理過戶等交車手續。</p>
       </div>
-      <div class="card">
-        <h4>辦理分期</h4>
+      <div class="service-card reveal">
+        <span class="service-icon"><svg class="ico" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span>
+        <h3>辦理分期</h3>
         <p>提供分期付款服務，協助辦理相關手續，減輕購車負擔。</p>
       </div>
-      <div class="card">
-        <h4>線上購車免到店</h4>
+      <div class="service-card reveal">
+        <span class="service-icon"><svg class="ico" viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></span>
+        <h3>線上購車免到店</h3>
         <p>透過 LINE 視訊或拍攝車輛影片/照片即可完成看車，免到店也能安心購車。</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="vehicles" class="section">
+<section id="process" class="section section-soft">
   <div class="container">
-    <h3>精選車輛</h3>
-    <div id="vehicle-list" class="cards vehicle-cards"></div>
-  </div>
-</section>
-
-<section id="process" class="section">
-  <div class="container">
-    <h3>購車流程</h3>
-    <div class="steps">
-      <div class="step">
-        <span class="step-num">01</span>
-        <h4>線上諮詢</h4>
-        <p>透過 LINE、電話或粉專私訊告訴我們你的需求與預算。</p>
-      </div>
-      <div class="step">
-        <span class="step-num">02</span>
-        <h4>看車試騎</h4>
-        <p>到店現場看車、確認車況，親自試騎感受。</p>
-      </div>
-      <div class="step">
-        <span class="step-num">03</span>
-        <h4>確認交易</h4>
-        <p>確認車況與價格後，協助辦理過戶等相關手續。</p>
-      </div>
-      <div class="step">
-        <span class="step-num">04</span>
-        <h4>安心交車</h4>
-        <p>完成交車，正式成為你的新愛車，安心上路。</p>
-      </div>
+    <div class="section-head reveal">
+      <p class="eyebrow">HOW IT WORKS</p>
+      <h2 class="section-title">購車流程</h2>
     </div>
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step-num">01</span>
+        <h3>線上諮詢</h3>
+        <p>透過 LINE、電話或粉專私訊告訴我們你的需求與預算。</p>
+      </li>
+      <li class="step reveal">
+        <span class="step-num">02</span>
+        <h3>看車試騎</h3>
+        <p>到店現場看車試騎，或用 LINE 視訊線上看車。</p>
+      </li>
+      <li class="step reveal">
+        <span class="step-num">03</span>
+        <h3>確認交易</h3>
+        <p>確認車況與價格後，協助辦理分期、過戶等手續。</p>
+      </li>
+      <li class="step reveal">
+        <span class="step-num">04</span>
+        <h3>安心交車</h3>
+        <p>完成交車，正式成為你的新愛車，安心上路。</p>
+      </li>
+    </ol>
   </div>
 </section>
 
-<section id="why" class="section alt">
+<section id="why" class="section section-dark">
   <div class="container">
-    <h3>為什麼選擇愷羽車業</h3>
-    <div class="cards">
-      <div class="card">
-        <h4>車況透明</h4>
+    <div class="section-head reveal">
+      <p class="eyebrow">WHY US</p>
+      <h2 class="section-title">為什麼選擇愷羽車業</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="why-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <h3>車況透明</h3>
         <p>每台車出售前檢查，如實告知車況，不隱瞞問題。</p>
       </div>
-      <div class="card">
-        <h4>價格合理</h4>
+      <div class="why-card reveal">
+        <span class="why-icon"><svg class="ico" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+        <h3>價格合理</h3>
         <p>依市場行情合理訂價，不亂喊價、不強迫推銷。</p>
       </div>
-      <div class="card">
-        <h4>手續協助</h4>
-        <p>協助辦理過戶等交車相關手續，省時省心。</p>
+      <div class="why-card reveal">
+        <span class="why-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+        <h3>手續協助</h3>
+        <p>協助辦理過戶、分期等交車相關手續，省時省心。</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="faq" class="section alt">
-  <div class="container">
-    <h3>常見問題</h3>
-    <div class="faq-list">
+<section id="faq" class="section">
+  <div class="container faq-wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="section-title">常見問題</h2>
+    </div>
+    <div class="faq-list reveal">
       <details class="faq-item">
         <summary>可以先線上詢問車輛狀況嗎？</summary>
         <p>可以，歡迎透過 LINE（@kymoto）或粉專私訊詢問，我們會盡快回覆車況、價格等相關資訊。</p>
+      </details>
+      <details class="faq-item">
+        <summary>可以辦理分期嗎？</summary>
+        <p>可以，我們提供分期付款服務並協助辦理相關手續，詳細方案歡迎 LINE 或電話洽詢。</p>
       </details>
       <details class="faq-item">
         <summary>買車後可以協助過戶嗎？</summary>
@@ -172,31 +232,70 @@
   </div>
 </section>
 
-<section id="contact" class="section">
+<section id="contact" class="section section-soft">
   <div class="container">
-    <h3>聯絡資訊</h3>
-    <div class="contact-grid">
-      <ul class="contact-list">
-        <li><strong>地址：</strong>台中市北區成功路457號</li>
-        <li><strong>電話：</strong><a href="tel:0975536039">0975-536-039</a></li>
-        <li><strong>營業時間：</strong>11:00 - 19:00</li>
-        <li><strong>LINE：</strong><a href="https://line.me/R/ti/p/@kymoto" target="_blank" rel="noopener">@kymoto</a></li>
-      </ul>
-      <iframe class="map-embed" src="https://maps.google.com/maps?q=%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%8D%80%E6%88%90%E5%8A%9F%E8%B7%AF457%E8%99%9F&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="section-head reveal">
+      <p class="eyebrow">CONTACT</p>
+      <h2 class="section-title">聯絡我們</h2>
     </div>
-    <div class="social-links">
-      <a href="https://www.facebook.com/cheng997" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://www.youtube.com/@愷羽車業-moto" target="_blank" rel="noopener">YouTube</a>
-      <a href="https://www.instagram.com/ky_moto666/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://line.me/R/ti/p/@kymoto" target="_blank" rel="noopener">LINE</a>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <ul class="contact-list">
+          <li>
+            <span class="contact-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><span class="contact-label">地址</span>台中市北區成功路457號</div>
+          </li>
+          <li>
+            <span class="contact-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div><span class="contact-label">電話</span><a href="tel:0975536039">0975-536-039</a></div>
+          </li>
+          <li>
+            <span class="contact-icon"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+            <div><span class="contact-label">營業時間</span>11:00 - 19:00</div>
+          </li>
+          <li>
+            <span class="contact-icon"><svg class="ico" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+            <div><span class="contact-label">LINE 官方帳號</span><a href="https://line.me/R/ti/p/@kymoto" target="_blank" rel="noopener">@kymoto</a></div>
+          </li>
+        </ul>
+        <div class="contact-actions">
+          <a href="tel:0975536039" class="btn btn-dark">撥打電話</a>
+          <a href="https://line.me/R/ti/p/@kymoto" target="_blank" rel="noopener" class="btn btn-line">加 LINE</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%8D%80%E6%88%90%E5%8A%9F%E8%B7%AF457%E8%99%9F" target="_blank" rel="noopener" class="btn btn-outline-dark">導航到店</a>
+        </div>
+      </div>
+      <iframe class="map-embed reveal" title="愷羽車業地圖" src="https://maps.google.com/maps?q=%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%8D%80%E6%88%90%E5%8A%9F%E8%B7%AF457%E8%99%9F&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
-  <div class="container">
-    <img src="logo.jpg" alt="愷羽車業" class="footer-logo">
-    <p>&copy; 2026 愷羽車業. All rights reserved.</p>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="logo.jpg" alt="愷羽車業" class="footer-logo">
+      <p>台中中古機車買賣｜車況透明・可辦分期・線上購車免到店</p>
+    </div>
+    <div>
+      <h4>快速連結</h4>
+      <ul class="footer-links">
+        <li><a href="#vehicles">在售車輛</a></li>
+        <li><a href="#services">服務項目</a></li>
+        <li><a href="#process">購車流程</a></li>
+        <li><a href="#faq">常見問題</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>追蹤我們</h4>
+      <ul class="footer-links">
+        <li><a href="https://www.facebook.com/cheng997" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.youtube.com/@愷羽車業-moto" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.instagram.com/ky_moto666/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://line.me/R/ti/p/@kymoto" target="_blank" rel="noopener">LINE @kymoto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">&copy; 2026 愷羽車業. All rights reserved.</div>
   </div>
 </footer>
 
@@ -206,5 +305,6 @@
 </a>
 
 <script src="vehicles.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
