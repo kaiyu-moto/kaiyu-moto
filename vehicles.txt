@@ -27,7 +27,7 @@ GSXR-150 | 2019 | 38000 km | 150cc | 48,000 | car04.jpg
 勁戰6代UBS | 2024 | 15000 km | 125cc | 68,000 | car05.jpg
 VJR125ABS+TCS | 2022 | 25000 km | 125cc | 55,000 | car06.jpg
 drg158 | 2024 | 2500 km | 158cc | 85,000 | car07.jpg
-mnay110 | 2018 | 28000 km | 110cc | 38,000 | car08.jpg
+many110 | 2018 | 28000 km | 110cc | 38,000 | car08.jpg
 krv180鏈條版 | 2022 | 13000 km | 180cc | 72,000 | car09.jpg
 jets125abs | 2018 | 29000 km | 125cc | 42,000 | car10.jpg
 雲豹223h abs | 2020 | 2800 km | 223cc | 42,000 | car11.jpg
