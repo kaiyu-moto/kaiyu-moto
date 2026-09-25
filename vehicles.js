@@ -31,6 +31,7 @@ fetch('vehicles.txt')
             <h4>${name || ''}</h4>
             <p class="vehicle-meta">${meta}</p>
             <p class="vehicle-price">NT$ ${price || '洽詢'}</p>
+            <a href="https://line.me/R/ti/p/@kymoto" target="_blank" rel="noopener" class="btn-ask">詢問這台車</a>
           </div>
         `;
       })
