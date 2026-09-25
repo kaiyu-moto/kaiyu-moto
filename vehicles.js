@@ -64,10 +64,6 @@ fetch('vehicles.txt')
     const list = document.getElementById('vehicle-list');
     const filterBar = document.getElementById('vehicle-filter');
 
-    document.querySelectorAll('[data-vehicle-count]').forEach((el) => {
-      el.textContent = vehicles.length;
-    });
-
     if (!list) return;
 
     if (vehicles.length === 0) {
@@ -82,12 +78,9 @@ fetch('vehicles.txt')
 
     if (filterBar) {
       filterBar.innerHTML = CC_GROUPS
-        .map((g) => ({ ...g, count: vehicles.filter((v) => g.test(v.ccNum)).length }))
-        .filter((g) => g.count > 0)
+        .filter((g) => vehicles.some((v) => g.test(v.ccNum)))
         .map((g, i) => `
-          <button type="button" class="chip${i === 0 ? ' active' : ''}" data-group="${g.key}" role="tab" aria-selected="${i === 0}">
-            ${g.label}<span>${g.count}</span>
-          </button>
+          <button type="button" class="chip${i === 0 ? ' active' : ''}" data-group="${g.key}" role="tab" aria-selected="${i === 0}">${g.label}</button>
         `).join('');
 
       filterBar.addEventListener('click', (e) => {
