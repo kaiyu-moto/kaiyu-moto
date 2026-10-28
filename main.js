@@ -32,3 +32,25 @@ if ('IntersectionObserver' in window) {
 } else {
   revealEls.forEach((el) => el.classList.add('in'));
 }
+
+// Google Ads 轉換追蹤：點 LINE、點電話、點導航
+// 在 Google Ads 建立轉換動作後，把拿到的「轉換標籤」貼到下面（例如 'AW-658158835/AbC-D_efG123'）。
+// 留空的項目不會送出。
+const CONVERSIONS = {
+  line: 'AW-658158835/PjGDCJKRg60dEPPp6rkC',
+  tel: 'AW-658158835/y49aCKeSiK0dEPPp6rkC',
+  map: '',
+};
+
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a[href]');
+  if (!a || typeof gtag !== 'function') return;
+  const href = a.getAttribute('href');
+  let type = '';
+  if (href.includes('line.me')) type = 'line';
+  else if (href.startsWith('tel:')) type = 'tel';
+  else if (href.includes('google.com/maps')) type = 'map';
+  if (type && CONVERSIONS[type]) {
+    gtag('event', 'conversion', { send_to: CONVERSIONS[type], transport_type: 'beacon' });
+  }
+});
