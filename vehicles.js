@@ -31,7 +31,7 @@ function askLink(v) {
 
 function renderCard(v) {
   const photo = v.photo
-    ? `<img src="images/${escapeHtml(v.photo)}" alt="${escapeHtml(v.name)}" loading="lazy">`
+    ? `<img src="images/${escapeHtml(v.photo)}" alt="${escapeHtml(`${v.name} ${v.year || ''} 二手機車 ${v.cc || ''}`.replace(/\s+/g, ' ').trim())}" loading="lazy">`
     : `<div class="v-photo-empty">照片準備中</div>`;
   const specs = [v.mileage, v.cc].filter(Boolean)
     .map((s) => `<span>${escapeHtml(s)}</span>`).join('');
@@ -57,6 +57,38 @@ function renderCard(v) {
   `;
 }
 
+// 讓 Google 讀得懂在售車輛（結構化資料），內容自動跟著 vehicles.txt 更新
+function addVehicleSchema(vehicles) {
+  const base = 'https://kaiyu-moto.github.io/kaiyu-moto/';
+  const items = vehicles.map((v, i) => {
+    const price = String(v.price || '').replace(/[^\d]/g, '');
+    const km = parseInt(String(v.mileage || '').replace(/[^\d]/g, ''), 10);
+    const item = {
+      '@type': 'Motorcycle',
+      name: `${v.name} ${v.year || ''}`.trim(),
+      itemCondition: 'https://schema.org/UsedCondition',
+    };
+    if (v.photo) item.image = base + 'images/' + v.photo;
+    if (v.year) item.vehicleModelDate = v.year;
+    if (km) item.mileageFromOdometer = { '@type': 'QuantitativeValue', value: km, unitCode: 'KMT' };
+    if (price) {
+      item.offers = {
+        '@type': 'Offer', price, priceCurrency: 'TWD',
+        availability: 'https://schema.org/InStock',
+        seller: { '@id': base + '#dealer' },
+      };
+    }
+    return { '@type': 'ListItem', position: i + 1, item };
+  });
+  const s = document.createElement('script');
+  s.type = 'application/ld+json';
+  s.textContent = JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'ItemList',
+    name: '愷羽車業在售二手機車', itemListElement: items,
+  });
+  document.head.appendChild(s);
+}
+
 fetch('vehicles.txt')
   .then((res) => res.text())
   .then((text) => {
@@ -65,6 +97,8 @@ fetch('vehicles.txt')
     const filterBar = document.getElementById('vehicle-filter');
 
     if (!list) return;
+
+    addVehicleSchema(vehicles);
 
     if (vehicles.length === 0) {
       list.innerHTML = '<p class="v-empty">目前尚無上架車輛，敬請期待。</p>';

@@ -974,6 +974,16 @@ section[id] {
   margin-bottom: 16px;
 }
 
+.footer-nap {
+  font-style: normal;
+  margin-top: 10px;
+  line-height: 1.7;
+}
+
+.footer-nap a {
+  color: inherit;
+}
+
 .site-footer h4 {
   color: #fff;
   font-size: 1rem;
