@@ -42,15 +42,22 @@ const CONVERSIONS = {
   map: '',
 };
 
+// Meta Pixel 事件：LINE、電話回報「Contact」，導航回報「FindLocation」
+const META_EVENTS = { line: 'Contact', tel: 'Contact', map: 'FindLocation' };
+
 document.addEventListener('click', (e) => {
   const a = e.target.closest('a[href]');
-  if (!a || typeof gtag !== 'function') return;
+  if (!a) return;
   const href = a.getAttribute('href');
   let type = '';
   if (href.includes('line.me')) type = 'line';
   else if (href.startsWith('tel:')) type = 'tel';
   else if (href.includes('google.com/maps')) type = 'map';
-  if (type && CONVERSIONS[type]) {
+  if (!type) return;
+  if (typeof gtag === 'function' && CONVERSIONS[type]) {
     gtag('event', 'conversion', { send_to: CONVERSIONS[type], transport_type: 'beacon' });
+  }
+  if (typeof fbq === 'function') {
+    fbq('track', META_EVENTS[type], { method: type });
   }
 });
