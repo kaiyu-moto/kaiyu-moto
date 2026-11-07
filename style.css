@@ -118,9 +118,36 @@ section[id] {
   justify-content: space-between;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
 .brand-logo {
   height: 52px;
   width: auto;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--navy);
+}
+
+.brand-sub {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
 }
 
 .site-nav {
@@ -1090,6 +1117,9 @@ section[id] {
   }
   .brand-logo {
     height: 44px;
+  }
+  .brand-name {
+    font-size: 1.1rem;
   }
   .nav-toggle {
     display: block;
